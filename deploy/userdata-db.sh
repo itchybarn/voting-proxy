@@ -15,7 +15,7 @@ set -euo pipefail
 # USERNAME. DO NOT CHANGE THE REPOSITORY NAME (voting-proxy).
 ##############################################################################
 ##############################################################################
-REPO_URL="https://github.com/YOUR_GITHUB_USERNAME/voting-proxy.git"
+REPO_URL="https://github.com/itchybarn/voting-proxy.git"
 
 APP_DIR=/home/ec2-user/voting-proxy
 DYNAMODB_ZIP_URL="https://s3.us-west-2.amazonaws.com/dynamodb-local/v2.x/dynamodb_local_latest.zip"
