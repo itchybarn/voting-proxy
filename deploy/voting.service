@@ -13,7 +13,7 @@ EnvironmentFile=/home/ec2-user/voting-proxy/.env
 # gunicorn so we do not crash-loop while that instance is still booting.
 TimeoutStartSec=330
 ExecStartPre=/home/ec2-user/voting-proxy/.venv/bin/python /home/ec2-user/voting-proxy/scripts/wait_for_dynamodb.py --timeout 300
-ExecStart=/home/ec2-user/voting-proxy/.venv/bin/gunicorn --workers 2 --bind 0.0.0.0:5000 'voting.app:launch()'
+ExecStart=/home/ec2-user/voting-proxy/.venv/bin/gunicorn --workers 10 --bind 0.0.0.0:5000 'voting.app:launch()'
 Restart=on-failure
 RestartSec=5
 
